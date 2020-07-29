@@ -1,0 +1,23 @@
+  {
+    "name": "Audio message for VK",
+    "description" : "Translate audio message in VK in text if possible",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "main.html",
+      "default_icon": "active.png"
+    },
+    "content_scripts": [
+    	{
+    		"matches":[
+    			"https://vk.com/im*"
+    		],
+    		"run_at": "document_idle",
+    		"js": [
+    			"content.js"
+    		]
+    	}]
+  }
